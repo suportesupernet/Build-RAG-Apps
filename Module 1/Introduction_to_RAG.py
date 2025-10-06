@@ -29,3 +29,13 @@ from ibm_watsonx_ai.foundation_models.utils.enums import ModelTypes, DecodingMet
 from ibm_watson_machine_learning.foundation_models.extensions.langchain import WatsonxLLM
 import wget
 
+filename = 'companyPolicies.txt'
+ur = 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/6JDbUb_L3egv_eOkouY71A.txt'
+
+wget.download(url, out=filename)
+print('file downloaded')
+
+with open(filename, 'r') as file:
+    contents = file.read()
+    print(contents)
+
